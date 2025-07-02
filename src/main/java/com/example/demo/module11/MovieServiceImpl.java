@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class MovieServiceImpl implements MovieService {
-    private MovieRepository movieRepository = new MovieRepositoryImpl();
+    private final MovieRepository movieRepository;
 
     @Override
     public List<MovieModel> listMovies() {
@@ -26,7 +26,7 @@ public class MovieServiceImpl implements MovieService {
             movieRepository.saveMovie(movie);
         }
         else {
-            RuntimeException e = new RuntimeException("Invalid movie data");
+            throw new RuntimeException("Invalid movie data");
         }
 
         return listMovies();

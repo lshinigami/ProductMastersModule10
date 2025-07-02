@@ -23,7 +23,12 @@ public class MovieController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<List<MovieModel>> addMovie(@RequestBody MovieModel movie) {
-       return (ResponseEntity<List<MovieModel>>) movieService.addNewMovie(movie);
+    public ResponseEntity<?> addMovie(@RequestBody MovieModel movie) {
+        try {
+            List<MovieModel> updatedList = movieService.addNewMovie(movie);
+            return ResponseEntity.ok(updatedList);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }
