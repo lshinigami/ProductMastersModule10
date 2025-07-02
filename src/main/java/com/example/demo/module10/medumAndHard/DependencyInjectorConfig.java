@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.module10.medumAndHard;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;

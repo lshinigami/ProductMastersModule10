@@ -1,4 +1,4 @@
-package com.example.demo.easy;
+package com.example.demo.module10.easy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

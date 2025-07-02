@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.module10.medumAndHard;
 
 import java.math.BigDecimal;
 

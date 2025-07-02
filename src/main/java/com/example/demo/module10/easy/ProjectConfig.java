@@ -1,4 +1,4 @@
-package com.example.demo.easy;
+package com.example.demo.module10.easy;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
